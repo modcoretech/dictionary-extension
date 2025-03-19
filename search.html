@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dictionary Search</title>
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+<body>
+  <a href="tutorial.html" target="_blank">Tutorial</a>
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="Enter a word...">
+    <button id="searchButton">Search</button>
+  </div>
+
+  <div class="filters-container">
+    <div class="filter-section">
+      <div class="filter-header" data-target="partOfSpeechFilter">Part of Speech</div>
+      <div class="filter-content" id="partOfSpeechFilter">
+        <label><input type="checkbox" value="noun"> Noun</label>
+        <label><input type="checkbox" value="verb"> Verb</label>
+        <label><input type="checkbox" value="adjective"> Adjective</label>
+        <label><input type="checkbox" value="adverb"> Adverb</label>
+      </div>
+    </div>
+  </div>
+
+  <div id="dictionary-content">
+    <div id="loading" style="display: none;">Loading...</div>
+    <div id="error" style="display: none;">Error loading definition.</div>
+    <div id="word"></div>
+    <div id="phonetics"></div>
+    <button id="listenButton" style="display: none;">Listen</button>
+    <div id="definitions"></div>
+    <div id="etymology"></div>
+  </div>
+
+  <script src="js/cache.js"></script>
+  <script src="js/search.js"></script>
+</body>
+</html>

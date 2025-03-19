@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Dictionary Popup",
+    "version": "1.0",
+    "description": "Look up selected text in a popup.",
+    "permissions": [
+      "contextMenus",
+      "activeTab",
+      "scripting",
+      "storage"
+    ],
+    "background": {
+      "service_worker": "js/background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["js/content.js"]
+      }
+    ],
+    "options_page": "options.html",
+    "action": {
+      "default_popup": "search.html"
+    }
+  }

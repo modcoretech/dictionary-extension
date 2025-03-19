@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dictionary Lookup</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="fonts/fonts.css">
+</head>
+<body>
+  <div class="wordbook-container">
+    <header class="wordbook-header">
+      <div class="word-info">
+        <h1 id="word" class="wordbook-word"></h1>
+        <div id="phonetics" class="wordbook-phonetics"></div>
+      </div>
+      <button id="listenButton" class="wordbook-button">Listen</button>
+    </header>
+    <main class="wordbook-main">
+      <div id="definitions" class="wordbook-definitions">
+        <div class="loading">Loading definitions...</div>
+      </div>
+      <div id="etymology" class="wordbook-etymology"></div>
+    </main>
+    <footer class="wordbook-footer">
+      <button id="clearButton" class="wordbook-button clear-button">Clear Cache</button>
+      <p class="copyright">&copy; Dictionary Extension</p>
+    </footer>
+  </div>
+  <script src="js/cache.js"></script>
+  <script src="js/popup.js"></script>
+</body>
+</html>
