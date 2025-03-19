@@ -1,0 +1,156 @@
+:root {
+    --background-color: #f8f5f0;
+    --text-color: #333;
+    --header-footer-color: #f0ece6;
+    --definition-color: #f9f9f9;
+    --definition-strong-color: #1a5699;
+    --button-color: #333;
+    --button-border-color: #bbb;
+    --button-hover-color: #eee;
+    --clear-button-color: #d33;
+    --clear-button-hover-color: #fdd;
+    --border-color: #ddd;
+    --light-border-color: #eee;
+    --subtle-text-color: #666;
+    --loading-color: #888;
+    --font-family: 'Noto Serif', serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .wordbook-container {
+    width: 400px;
+    margin: 20px auto;
+    background-color: var(--background-color);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+  }
+  
+  .wordbook-header {
+    background-color: var(--header-footer-color);
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .wordbook-word {
+    margin: 0;
+    font-size: 2.2em;
+    color: var(--text-color);
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .wordbook-phonetics {
+    font-style: italic;
+    color: var(--subtle-text-color);
+    margin-top: 8px;
+    font-size: 0.9em;
+  }
+  
+  .wordbook-main {
+    padding: 20px;
+  }
+  
+  .wordbook-definitions {
+    margin-top: 20px;
+  }
+  
+  .definition {
+    margin-bottom: 20px;
+    padding: 18px;
+    border-radius: 6px;
+    background-color: var(--definition-color);
+    border: 1px solid var(--light-border-color);
+  }
+  
+  .definition strong {
+    color: var(--definition-strong-color);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+  
+  .wordbook-footer {
+    text-align: center;
+    padding: 18px;
+    background-color: var(--header-footer-color);
+    border-top: 1px solid var(--border-color);
+  }
+  
+  .wordbook-button {
+    font-family: var(--font-family);
+    background-color: transparent;
+    color: var(--button-color);
+    border: 1px solid var(--button-border-color);
+    padding: 10px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.95em;
+  }
+  
+  .wordbook-button:hover {
+    background-color: var(--button-hover-color);
+  }
+  
+  .clear-button {
+    font-family: var(--font-family);
+    border-color: var(--clear-button-color);
+    color: var(--clear-button-color);
+  }
+  
+  .clear-button:hover {
+    background-color: var(--clear-button-hover-color);
+  }
+  
+  .copyright {
+    font-size: 0.85em;
+    color: #777;
+    margin-top: 12px;
+  }
+  
+  .loading {
+    text-align: center;
+    font-style: italic;
+    color: var(--loading-color);
+    padding: 20px;
+  }
+  
+  body.dark-theme {
+    --background-color: #222;
+    --text-color: #eee;
+    --header-footer-color: #444;
+    --definition-color: #333;
+    --definition-strong-color: #5ab1ff;
+    --button-color: #eee;
+    --button-border-color: #888;
+    --button-hover-color: #555;
+    --border-color: #555;
+    --light-border-color: #444;
+    --subtle-text-color: #ccc;
+    --loading-color: #aaa;
+  }
+  
+  body.sepia-theme {
+    --background-color: #f4ecd8;
+    --text-color: #5f4b32;
+    --header-footer-color: #e8dfc8;
+    --definition-color: #e8e3d9;
+    --definition-strong-color: #8c7356;
+    --border-color: #d2c5b3;
+    --light-border-color: #e0d8c8;
+    --subtle-text-color: #7a6650;
+    --loading-color: #9a8870;
+  }

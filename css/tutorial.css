@@ -1,0 +1,93 @@
+:root {
+    --background-color: #f8f5f0;
+    --text-color: #333;
+    --section-bg-color: #fff;
+    --border-color: #ddd;
+    --button-color: #e0e0e0;
+    --button-hover-color: #d0d0d0;
+    --font-family: 'Noto Serif', serif;
+  }
+  
+  body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  .tutorial-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  section {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: var(--section-bg-color);
+  }
+  
+  h3 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin-bottom: 15px;
+  }
+  
+  .read-aloud, .try-it {
+    font-family: var(--font-family);
+    background-color: var(--button-color);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .read-aloud:hover, .try-it:hover {
+    background-color: var(--button-hover-color);
+  }
+
+  .tutorial-search {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  #tutorialSearchInput {
+    font-family: var(--font-family);
+    padding: 8px;
+    width: 70%;
+    max-width: 400px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+  }
+  
+  /* Theme adjustments */
+  body.dark-theme {
+    --background-color: #222;
+    --text-color: #eee;
+    --section-bg-color: #333;
+    --border-color: #555;
+    --button-color: #555;
+    --button-hover-color: #666;
+  }
+  
+  body.sepia-theme {
+    --background-color: #f4ecd8;
+    --text-color: #5f4b32;
+    --section-bg-color: #e8e3d9;
+    --border-color: #d2c5b3;
+    --button-color: #d2c5b3;
+    --button-hover-color: #c0b3a3;
+  }
