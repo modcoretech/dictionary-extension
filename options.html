@@ -6,44 +6,86 @@
   <link rel="stylesheet" href="fonts/fonts.css">
 </head>
 <body>
-  <div class="options-container">
-    <h2>Dictionary Options</h2>
+  <div class="main-container">
+    <div class="settings-column">
+      <h2>Dictionary Options</h2>
 
-    <div class="option-section">
-      <h3>Theme</h3>
-      <p>Choose the look you like best!</p>
-      <select id="themeSelect">
-        <option value="light">Light (Default)</option>
-        <option value="dark">Dark</option>
-        <option value="sepia">Sepia</option>
-      </select>
+      <section class="option-group">
+        <fieldset>
+          <legend>Theme Settings</legend>
+          <p class="description">Choose the look and feel for the dictionary popup.</p>
+          <label for="themeSelect">Theme:</label>
+          <select id="themeSelect">
+            <option value="light">Light (Default)</option>
+            <option value="dark">Dark</option>
+            <option value="sepia">Sepia</option>
+          </select>
+        </fieldset>
+      </section>
+
+      <section class="option-group">
+        <fieldset>
+          <legend>Text Appearance</legend>
+          <p class="description">Customize the text presentation for better readability.</p>
+
+          <div class="input-row">
+            <div class="input-half">
+              <label for="fontSizeInput">Font Size (px):</label>
+              <input type="number" id="fontSizeInput" min="12" max="24" step="1" aria-describedby="fontSizeHint">
+              <span id="fontSizeHint" class="input-hint">Default: 16px. Range: 12-24.</span>
+            </div>
+            <div class="input-half">
+              <label for="fontFamilySelect">Font Family:</label>
+              <select id="fontFamilySelect">
+                <option value="Noto Serif, serif">Noto Serif (Default)</option>
+                <option value="Arial, sans-serif">Arial</option>
+                <option value="Verdana, sans-serif">Verdana</option>
+                <option value="Times New Roman, serif">Times New Roman</option>
+              </select>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+
+      <section class="option-group">
+        <fieldset>
+          <legend>Speech Settings</legend>
+          <p class="description">Adjust how fast and high the text-to-speech voice sounds.</p>
+          
+          <div class="input-row">
+            <div class="input-half">
+              <label for="rateInput">Speech Rate (Speed):</label>
+              <input type="number" id="rateInput" min="0.5" max="2.0" step="0.1" aria-describedby="rateHint">
+              <span id="rateHint" class="input-hint">Default: 1.0. Range: 0.5 - 2.0.</span>
+            </div>
+            <div class="input-half">
+              <label for="pitchInput">Speech Pitch (High/Low):</label>
+              <input type="number" id="pitchInput" min="0.5" max="2.0" step="0.1" aria-describedby="pitchHint">
+              <span id="pitchHint" class="input-hint">Default: 1.0. Range: 0.5 - 2.0.</span>
+            </div>
+          </div>
+        </fieldset>
+      </section>
+
+      <div class="action-buttons">
+        <button id="saveButton" aria-label="Save all current options">Save Options</button>
+        <button id="resetButton" aria-label="Reset all options to their default values">Reset to Defaults</button>
+      </div>
     </div>
 
-    <div class="option-section">
-      <h3>Speech Settings</h3>
-      <p>Adjust how fast and high the voice sounds.</p>
-      <label for="rateInput">Speech Rate (Speed):</label>
-      <input type="number" id="rateInput" min="0.5" max="2" step="0.1">
-      <label for="pitchInput">Speech Pitch (High/Low):</label>
-      <input type="number" id="pitchInput" min="0.5" max="2" step="0.1">
+    <div class="preview-column">
+      <h3>Live Preview</h3>
+      <div id="dictionaryPreview" class="dictionary-preview">
+        <h4>Word: Lexicon</h4>
+        <span class="pronunciation">/ˈlɛksɪkɒn/</span>
+        <div class="meaning">
+          <p><strong>1. Noun:</strong> The vocabulary of a person, language, or branch of knowledge.</p>
+          <p><em>Example: "The specialized lexicon of computer science."</em></p>
+          <p><strong>2. Noun:</strong> A dictionary, especially of Greek, Latin, or Hebrew.</p>
+        </div>
+      </div>
+      <p class="preview-note">This preview updates as you change the Theme, Font Size, and Font Family settings.</p>
     </div>
-
-    <div class="option-section">
-      <h3>Text Appearance</h3>
-      <p>Change how the text looks.</p>
-      <label for="fontSizeInput">Font Size:</label>
-      <input type="number" id="fontSizeInput" min="12" max="24" step="1">
-      <label for="fontFamilySelect">Font Family:</label>
-      <select id="fontFamilySelect">
-        <option value="Noto Serif, serif">Noto Serif</option>
-        <option value="Arial, sans-serif">Arial</option>
-        <option value="Verdana, sans-serif">Verdana</option>
-        <option value="Times New Roman, serif">Times New Roman</option>
-      </select>
-    </div>
-
-    <button id="saveButton">Save Options</button>
-    <button id="resetButton">Reset to Defaults</button>
   </div>
   <script src="js/options.js"></script>
 </body>
